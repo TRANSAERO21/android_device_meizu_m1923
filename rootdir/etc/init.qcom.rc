@@ -9,6 +9,10 @@ on post-fs
     mount none /system/etc/a2dp_audio_policy_configuration.xml /vendor/etc/a2dp_audio_policy_configuration.xml bind
     mount none /dev/null /vendor/overlay/BluetoothResCommon.apk bind
 
+on boot
+    # Set permissions so radio can read
+    chmod 0444 /proc/cmdline
+
 service charger.meizu /system/bin/charger
     class charger
     group system graphics
