@@ -29,6 +29,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="meizu_Note9_CN-user 10 QKQ1.191222.002 1593669022 release-keys"
 
 BUILD_FINGERPRINT := meizu/qssi/qssi:10/QKQ1.191222.002/1593669022:user/release-keys
-
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.sf.lcd_density=400
