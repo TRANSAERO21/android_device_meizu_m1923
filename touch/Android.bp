@@ -1,0 +1,23 @@
+//
+// Copyright (C) 2020 The MoKee Open Source Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_binary {
+    name: "lineage.touch@1.0-service.m1923",
+    init_rc: ["lineage.touch@1.0-service.m1923.rc"],
+    defaults: ["hidl_defaults"],
+    relative_install_path: "hw",
+    srcs: [
+        "TouchscreenGesture.cpp",
+        "service.cpp",
+    ],
+    shared_libs: [
+        "libbase",
+        "libbinder",
+        "libhidlbase",
+        "libutils",
+        "vendor.lineage.touch@1.0",
+    ],
+}

@@ -67,6 +67,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.meizu_m1923
 
+# Touch
+PRODUCT_PACKAGES += \
+    lineage.touch@1.0-service.m1923
+
 # LiveDisplay
 PRODUCT_PACKAGES += \
     lineage.livedisplay@2.0-service-sdm
