@@ -79,6 +79,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     lineage.livedisplay@2.0-service-sdm
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.0-impl.m1923
+
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_profiles_vendor.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_profiles_vendor.xml
