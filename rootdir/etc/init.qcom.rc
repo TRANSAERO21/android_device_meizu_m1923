@@ -13,6 +13,8 @@ on boot
     # Set permissions so radio can read
     chmod 0444 /proc/cmdline
 
+    setprop init.svc.console stopped
+
 service charger.meizu /system/bin/charger
     class charger
     group system graphics
