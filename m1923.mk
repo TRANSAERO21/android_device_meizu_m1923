@@ -52,11 +52,8 @@ PRODUCT_PACKAGES += \
     ims_ext_common.xml
 
 # Init
-PRODUCT_PACKAGES += \
-    init.qcom.rc
-
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/vendor_fstab.qcom:$(TARGET_COPY_OUT_SYSTEM)/etc/vendor_fstab.qcom
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/init/vendor,$(TARGET_COPY_OUT_VENDOR))
 
 # Lights
 PRODUCT_PACKAGES += \
