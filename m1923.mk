@@ -34,11 +34,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     AntHalService
 
-# Audio
-PRODUCT_PACKAGES += \
-    audio.a2dp.default \
-    libaacwrapper
-
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
@@ -90,6 +85,19 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service
 
 # Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio@2.0-service \
+    android.hardware.audio.effect@5.0-impl \
+    android.hardware.soundtrigger@2.2-impl \
+    audio.a2dp.default \
+    audio.r_submix.default \
+    audio.usb.default \
+    libaudio-resampler \
+    libdynproc \
+    libtinyalsa \
+    libaacwrapper
+
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/audio,$(TARGET_COPY_OUT_VENDOR)/etc)
 
