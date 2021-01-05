@@ -58,7 +58,8 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.qcom.rc
+    init.qcom.rc \
+    migrate_legacy_obb_data.sh
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/vendor_fstab.qcom:$(TARGET_COPY_OUT_SYSTEM)/etc/vendor_fstab.qcom
