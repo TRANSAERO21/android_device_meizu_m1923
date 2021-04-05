@@ -61,6 +61,7 @@ etc/sysconfig/qti_whitelist.xml
 etc/permissions/qti_libpermissions.xml|d0c300e094c36bfb262cf001773bd5cc8d5858d8
 etc/permissions/qti_permissions.xml
 product/etc/permissions/telephonyservice.xml
+product/etc/permissions/telephony_product_privapp-permissions-qti.xml
 product/etc/permissions/qcrilhook.xml
 product/framework/QtiTelephonyServicelibrary.jar
 product/framework/qcrilhook.jar
