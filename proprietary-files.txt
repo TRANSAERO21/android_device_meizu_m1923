@@ -3,8 +3,13 @@
 -product/app/QtiTelephonyService/QtiTelephonyService.apk
 -product/app/embms/embms.apk
 -product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+etc/permissions/privapp-permissions-qti.xml
+etc/sysconfig/qti_whitelist.xml
+etc/permissions/qti_libpermissions.xml|d0c300e094c36bfb262cf001773bd5cc8d5858d8
+etc/permissions/qti_permissions.xml
 product/etc/permissions/embms.xml
 product/etc/permissions/qcrilhook.xml
+product/etc/permissions/telephony_product_privapp-permissions-qti.xml
 product/etc/permissions/telephonyservice.xml
 product/framework/QtiTelephonyServicelibrary.jar
 product/framework/embmslibrary.jar
@@ -52,19 +57,6 @@ lib/libOmxMux.so
 lib/libmmosal.so
 lib/libmmparser_lite.so
 lib64/libmmosal.so
-
-# Telephony
--product/app/QtiTelephonyService/QtiTelephonyService.apk
--product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
-etc/permissions/privapp-permissions-qti.xml
-etc/sysconfig/qti_whitelist.xml
-etc/permissions/qti_libpermissions.xml|d0c300e094c36bfb262cf001773bd5cc8d5858d8
-etc/permissions/qti_permissions.xml
-product/etc/permissions/telephonyservice.xml
-product/etc/permissions/telephony_product_privapp-permissions-qti.xml
-product/etc/permissions/qcrilhook.xml
-product/framework/QtiTelephonyServicelibrary.jar
-product/framework/qcrilhook.jar
 
 # Charger
 bin/charger
