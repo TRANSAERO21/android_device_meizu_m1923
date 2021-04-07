@@ -30,6 +30,7 @@
 #include <fstream>
 #include <unistd.h>
 
+#include <android-base/file.h>
 #include <android-base/properties.h>
 #include <android-base/strings.h>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
@@ -39,6 +40,8 @@
 #include "vendor_init.h"
 
 using android::base::GetProperty;
+using android::base::ReadFileToString;
+using android::base::Trim;
 
 // copied from build/tools/releasetools/ota_from_target_files.py
 // but with "." at the end and empty entry
@@ -80,6 +83,17 @@ void set_ro_build_prop(char const prop[], char const value[])
 
 void vendor_load_properties()
 {
+    char const *mz_info_serialno_file = "/proc/sys/kernel/boot_reason";
+    std::string serialno;
+
+    if (ReadFileToString(mz_info_serialno_file, &serialno)) {
+        if (Trim(serialno).find("923H")) {
+            set_ro_build_prop("fingerprint", "meizu/meizu_note9/meizunote9:9/PKQ1.181203.001/1552448469:user/release-keys");
+            set_ro_product_prop("name", "meizu_note9");
+            property_override("ro.build.description", "meizu_note9-user 9 PKQ1.181203.001 1552448469 release-keys", true);
+        }
+    }
+
     set_ro_build_prop("type", "user");
     set_ro_build_prop("tags", "release-keys");
     property_override("ro.boot.verifiedbootstate", "green", true);
