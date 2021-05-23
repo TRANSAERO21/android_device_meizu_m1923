@@ -12,12 +12,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit from m1923 device
 $(call inherit-product, device/meizu/m1923/m1923.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+#
+# All components inherited here go to product image
+#
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_product.mk)
 
 # Credits to XiNGRZ again
 
-PRODUCT_NAME := lineage_m1923
+PRODUCT_NAME := aosp_m1923
 PRODUCT_BRAND := meizu
 PRODUCT_DEVICE := m1923
 PRODUCT_MANUFACTURER := meizu

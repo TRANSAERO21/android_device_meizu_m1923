@@ -68,21 +68,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.meizu_m1923
 
-# Touch
-PRODUCT_PACKAGES += \
-    lineage.touch@1.0-service.m1923
-
 # Input
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/keylayout,$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout)
-
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    lineage.livedisplay@2.0-service-sdm
-
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.0-impl.m1923
 
 # Media
 PRODUCT_COPY_FILES += \
